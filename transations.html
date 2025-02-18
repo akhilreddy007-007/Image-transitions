@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            /* background-color: lightblue; */
+            margin: 50px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        img{
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.5s ease-in-out;
+        }
+        .float:hover{
+            transform: translatey(-50px);
+        }
+
+        .flip:hover{
+            transform: rotate(180deg);
+        }
+
+        .blur{
+            filter: blur(5px);
+        }
+
+        .blur:hover{
+        filter: blur(0px);
+        }
+
+        .pls{
+                animation: pulse 0.5s  infinite alternate;
+        }
+        @keyframes pulse {
+            0%{transform: scale(1); opacity: 1;}
+            100% {transform: scale(1.1);opacity: 0.8;           }
+        }
+
+        .shake:hover{
+            animation: shake 0.3s infinite;
+        }
+        @keyframes shake {
+            0%,100%{transform: translateX(0);}
+            25%{transform: translateX(-5px);}
+            50%{transform: translateX(5px);}
+            75%{transform: translateX(-5px);}
+        }
+
+        .spin:hover{
+            transform: rotate(360deg);
+        }
+
+        .tilt:hover{
+            transform: skewX(10deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Awesome image effectors </h1>
+    <div class="container">
+        <div><h2>1.Floating Effect</h2></div>
+        <img src="harley-davidson.png" alt="" class="float">
+    </div>
+    <div><h2>2.flip effect</h2>
+    <img src="harley-davidson.png" alt="" class="flip"></div>
+    <div><h2>3.blur to focus effect</h2>
+    <img src="harley-davidson.png" alt="" class="blur"></div>
+    <div><h2>4.plsing effect</h2></div>
+    <img src="harley-davidson.png" alt="" class="pls">
+    <div><h1> 5.shake effect</h2>
+    <img src="harley-davidson.png" alt="" class="shake"></div>
+    <div><h2>6.spin effect</h2>
+    <img src="harley-davidson.png" alt="" class="spin"></div>
+    <div><h2>7.skew effect</h2>
+    <img src="harley-davidson.png" alt="" class="tilt"></div>
+</body>
+</html>

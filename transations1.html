@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>    body{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        margin: 50px;
+    }
+    container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    img{
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.5s ease-in-out ;
+    }
+
+    .zoom:hover{
+        transform: translatey(-50px);
+    }
+
+    .rotate:hover{
+        transform: rotate(360deg);
+    }
+
+    .zoominout:hover{
+        animation: zoomss 3s alternate ease-in-out;
+    }
+    @keyframes zoomss{
+        0%{transform: scale(1);}
+        100%{transform: scale(-0.4);}
+    }
+</STYle>
+
+</head>
+<body>
+    <h1>Image effects </h1>
+    <div class="container">
+        <div> <h2>1.bouncing image</h2>
+            <img src="harley-davidson.png" alt="bounce" class="zoom">
+        </div>
+    </div>
+    <div><h2>2.rotating image</h2>
+        <img src="harley-davidson.png"  class="rotate">
+    </div>
+    <div>
+        <h2>3.zoomin and out</h2>
+        <img src="harley-davidson.png" alt="stretch image" class="zoominout">
+    </div>
+    <div>
+</body>
+</html>
